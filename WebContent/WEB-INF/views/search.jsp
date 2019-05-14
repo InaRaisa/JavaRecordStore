@@ -11,11 +11,15 @@
 	<ul>
 		<c:forEach var="album" items="${ albums }">
 			<h2>Albums:</h2>
-			<li><c:out value="${ album.getTitle() }" /></li>
+			<li><a href="album?id=${ album.getId() }"> <c:out
+						value="${ album.getTitle() }" />
+			</a></li>
 		</c:forEach>
 		<c:forEach var="artist" items="${ artists }">
 			<h2>Artists:</h2>
-			<li><c:out value="${ artist.getName() }" /></li>
+			<li><a href="artist?id=${ artist.getId() }"> <c:out
+						value="${ artist.getName() }" />
+			</a></li>
 		</c:forEach>
 	</ul>
 </body>

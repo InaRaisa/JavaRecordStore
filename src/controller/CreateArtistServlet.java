@@ -17,7 +17,7 @@ import database.dao.ArtistDao;
 @WebServlet("/artist/new")
 public class CreateArtistServlet extends HttpServlet {
 
-	private ArtistDao artistDao = new ArtistDao();
+	private static final ArtistDao artistDao = new ArtistDao();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

@@ -22,4 +22,8 @@ public class Artist {
 	public String toString() {
 		return this.name + " / " + this.id;
 	}
+
+	public void setId(long id2) {
+		
+	}
 }

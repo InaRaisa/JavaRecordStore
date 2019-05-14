@@ -4,17 +4,22 @@
 <html>
 
 <jsp:include page="_head.jsp">
-    <jsp:param name="title" value="${ album.getTitle() }" />
+	<jsp:param name="title" value="${ album.getTitle() }" />
 </jsp:include>
 
 <body>
 	<h1>
-		<c:out value="${ artist.getName() }" />: 
 		<c:out value="${ album.getTitle() } " />
 	</h1>
+	<h4>
+		By <a href="artist?id=${ artist.getId() }"> <c:out
+				value="${ artist.getName() }" />
+		</a>
+	</h4>
+	<h2>Tracks:</h2>
 	<table>
 		<tr>
-			<th>Track Name</th>
+			<th>Name</th>
 		</tr>
 		<c:forEach items="${ tracks }" var="track">
 			<tr>

@@ -15,7 +15,7 @@
 	</form>
 	
 	<ul>
-		<c:forEach var="artist" items="${ artists }">
+		<c:forEach items="${ artists }" var="artist" >
 			<li><a href="artist?id=${ artist.getId() }"> <c:out
 						value="${ artist.getName() }" />
 			</a></li>
